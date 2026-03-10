@@ -1,15 +1,4 @@
 
-#issues-container {
-    max-width: 1600px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    row-gap: 20px;
-    column-gap: 30px;
-    
-}
-
 .issue-card{
 background:rgb(253, 253, 253);
 padding:20px;

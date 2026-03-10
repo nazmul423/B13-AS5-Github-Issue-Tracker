@@ -36,16 +36,18 @@
 <body>
 
     <!-- header -->
-    <header class="pb-10">
-        <div class="navbar bg-base-100 shadow-sm px-6 p-6">
+     
+    <header class="pb-15">
+        <div class="navbar bg-base-100 shadow-sm px-4 py-4 flex-col sm:flex-row md:flex-row gap-4">
 
             <!-- Left -->
-            <div class="flex-1 flex items-center gap-2">
+
+            <div class="flex-1 flex items-center gap-2 sm:items-left">
 
                 <img src="./assets/github-logo.png" alt="" class="w-[36px] h-[36.9px]">
 
 
-                <a class="text-2xl font-semibold text-[20px]">
+                <a class="text-2xl btn btn-ghost font-semibold text-2xl">
                     GitHub Issues Tracker
                 </a>
 
@@ -55,9 +57,9 @@
             <!-- Right -->
 
 
-            <div class="flex gap-4">
+            <div class="flex gap-4 pt-4">
 
-                <div>
+                <div class="sm:mx-auto">
                     <label class="input input-bordered flex items-center gap-2">
 
                         <i class="fa-solid fa-search text-gray-400"></i>
@@ -73,21 +75,20 @@
 
             </div>
 
-            </nav>
 
         </div>
 
-        </div>
     </header>
 
 
 
     <main class="w-[80%] mx-auto">
 
+        <!-- All Btns  -->
 
         <section>
 
-            <div class="mb-8 pt-6 bg-[#FFFFFF] p-6 rounded-lg shadow-sm shadow-gray-300 gap-4 flex">
+            <div class="mb-8 pt-6 bg-[#FFFFFF] p-6 rounded-lg shadow-sm shadow-gray-300 gap-4 flex flex-col sm:flex-row"">
 
                 <button id="all" class="filter-btn btn btn-primary px-10">
                     All
@@ -105,18 +106,20 @@
 
         </section>
 
+        <!-- Issue Count -->
+
         <section>
 
             <div
-                class="flex justify-between items-center b-4 pb-6 bg-[#FFFFFF] p-6 rounded-lg shadow-sm shadow-gray-300">
+                class="flex  flex-col sm:flex-row justify-between items-center b-4 pb-6 bg-[#FFFFFF] p-6 rounded-lg shadow-sm shadow-gray-300">
                 <div class="flex-1 flex items-center gap-2">
 
-                    <img src="./assets//Aperture.png" alt=""">
+                    <img src="./assets//Aperture.png" alt="w-12 h-12">
 
 
                 <div>
                     <h1 class=" text-2xl font-semibold text-[1.2rem]">
-                    <span id="issue-count">50</span> Issues
+                    <span id="issue-count">50
                     </h1>
 
                     <p>Track and manage your project issues</p>
@@ -126,7 +129,7 @@
             </div>
 
 
-            <div class="flex space-between gap-8">
+            <div class="flex space-between gap-8 sm:flex flex-cols-3 mt-6 items-center">
                 <p class="gap-2"><i class="fa-sharp fa-solid fa-circle" style="color: rgba(0, 169, 110, 1);"></i>Open
                 </p>
                 <p class="gap-2"><i class="fa-solid fa-circle" style="color: rgba(168, 85, 247, 1);"></i>Closed</p>
@@ -135,11 +138,13 @@
 
         </section>
 
-            <!-- Post Section -->
-            <section class="mx-auto shadow-2xl rounded-lg mt-4">
-                <!-- Post Heading -->
+
+            <!-- Issue Section -->
+
+            <section class="mx-auto shadow-2xl rounded-lg mt-4 sm:">
+                
                 <div id="issues-container"
-                    class="flex flex-col md:flex-row gap-5 justify-between items-center p-4 border-b-2 border-b-gray-400 rounded-md">
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-7 max-w-[1600px] mx-auto my-12 justify-between items-center p-4 border-b-2 border-b-gray-400 rounded-md ">
                 </div>
             </section>
 
