@@ -11,7 +11,7 @@ const searchInput = document.getElementById("search-input");
 window.onload = function () {
     loadIssues();
 
-    // Search Functionality 
+    
     if (searchInput) {
         searchInput.addEventListener("input", (event) => {
             const query = event.target.value.toLowerCase();
@@ -34,7 +34,7 @@ window.onload = function () {
 };
 
 
-// Data Load from Server
+
 
 async function loadIssues() {
     container.innerHTML = ` <section id="spinner-container" class="hidden text-center">
@@ -57,7 +57,7 @@ async function loadIssues() {
 }
 
 
-// Getting Issues Card 
+
 
 function displayIssues(data) {
     container.innerHTML = "";
@@ -68,7 +68,6 @@ function displayIssues(data) {
         card.className = `issue-card priority-${issue.priority}`;
 
 
-        // Set Piority Color
 
         let priorityColor = "";
         if (issue.priority === "high") priorityColor = "bg-red-100 text-red-500 px-2 py-1 rounded";
@@ -77,7 +76,7 @@ function displayIssues(data) {
 
 
 
-        //  Add Status icon
+        
         const statusCircle = issue.status === "open"
             ? `<img src="./assets/Open-Status.png" alt="" class="w-5 h-5">`
             : `<img src="./assets/Closed- Status .png" alt="" class="w-5 h-5">`
@@ -191,7 +190,7 @@ function openModal(issue) {
     modal.showModal();
 }
 
-// Filter Issue 
+
 
 function filterIssues(status) {
     activeFilterBtn = status;
@@ -215,7 +214,7 @@ function filterIssues(status) {
 
 }
 
-// Update Count 
+
 
 function updateCount(count) {
     const countElement = document.getElementById("issue-count");
