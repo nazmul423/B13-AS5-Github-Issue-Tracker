@@ -1,0 +1,26 @@
+
+1️⃣ What is the difference between var, let, and const?
+
+Ans : Var : Initialization  এর আগে console log  করা যায় না ।
+
+      Let: Let Update করা যায় ।
+
+      Const : Const Update করা যায় না ।
+
+
+
+2️⃣ What is the spread operator (...)?
+
+Ans : Spread operator (...) array বা object কে আলাদা আলাদা ( expand ) করে ব্যবহার করতে দেয় ।
+
+      Example :
+
+      const numbers = [ 1, 2, 3 ];
+      console.log(...numbers);
+
+      Output : 1  2  3
+
+
+
+
+

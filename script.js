@@ -218,6 +218,6 @@ function filterIssues(status) {
 // Update Count 
 
 function updateCount(count) {
-    const countEl = document.getElementById("issue-count");
-    if (countEl) countEl.textContent = `${count} Issues`;
+    const countElement = document.getElementById("issue-count");
+    if (countElement) countElement.textContent = `${count} Issues`;
 }   
