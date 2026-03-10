@@ -217,7 +217,7 @@ function filterIssues(status) {
 
 // Update Count 
 
-// function updateCount(count) {
-//     const countEl = document.getElementById("issue-count");
-//     if (countEl) countEl.textContent = `${count} Issues`;
-// }   
+function updateCount(count) {
+    const countEl = document.getElementById("issue-count");
+    if (countEl) countEl.textContent = `${count} Issues`;
+}   
