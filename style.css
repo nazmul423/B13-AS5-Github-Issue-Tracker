@@ -1,0 +1,27 @@
+
+#issues-container {
+    max-width: 1600px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    row-gap: 20px;
+    column-gap: 30px;
+    
+}
+
+.issue-card{
+background:rgb(253, 253, 253);
+padding:20px;
+border-radius:10px;
+display:flex;
+flex-direction:column;
+gap:10px;
+width: 340px;
+height: 100%;
+box-shadow: 0px 0px 1px 1px gray;
+}
+
+.priority-high{border-top:4px solid #00A96E;}
+.priority-medium{border-top:4px solid #00A96E;}
+.priority-low{border-top:4px solid #A855F7;}

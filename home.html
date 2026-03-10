@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Intrigation -->
+
+    <!-- font integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Tailwind + Daisy Ui -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="pb-10">
+        <div class="navbar bg-base-100 shadow-sm px-6 p-6">
+
+            <!-- Left -->
+            <div class="flex-1 flex items-center gap-2">
+
+                <img src="./assets/github-logo.png" alt="" class="w-[36px] h-[36.9px]">
+
+
+                <a class="text-2xl font-semibold text-[20px]">
+                    GitHub Issues Tracker
+                </a>
+
+            </div>
+
+
+            <!-- Right -->
+
+
+            <div class="flex gap-4">
+
+                <div>
+                    <label class="input input-bordered flex items-center gap-2">
+
+                        <i class="fa-solid fa-search text-gray-400"></i>
+
+                        <input id="search-input" type="text" placeholder="Search issues..." class="grow" />
+
+                    </label>
+                </div>
+
+                <button id="issue-btn" class="btn btn-primary text-white border-none">
+                    <i class="fa-solid fa-plus"></i> New Issue
+                </button>
+
+            </div>
+
+            </nav>
+
+        </div>
+
+        </div>
+    </header>
+
+
+
+    <main class="w-[80%] mx-auto">
+
+
+        <section>
+
+            <div class="mb-8 pt-6 bg-[#FFFFFF] p-6 rounded-lg shadow-sm shadow-gray-300 gap-4 flex">
+
+                <button id="all" class="filter-btn btn btn-primary px-10">
+                    All
+                </button>
+
+                <button id="open" class="filter-btn btn btn-outline px-8">
+                    Open
+                </button>
+
+                <button id="closed" class="filter-btn btn btn-outline px-8">
+                    Closed
+                </button>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <div
+                class="flex justify-between items-center b-4 pb-6 bg-[#FFFFFF] p-6 rounded-lg shadow-sm shadow-gray-300">
+                <div class="flex-1 flex items-center gap-2">
+
+                    <img src="./assets//Aperture.png" alt=""">
+
+
+                <div>
+                    <h1 class=" text-2xl font-semibold text-[1.2rem]">
+                    <span id="issue-count">50</span> Issues
+                    </h1>
+
+                    <p>Track and manage your project issues</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="flex space-between gap-8">
+                <p class="gap-2"><i class="fa-sharp fa-solid fa-circle" style="color: rgba(0, 169, 110, 1);"></i>Open
+                </p>
+                <p class="gap-2"><i class="fa-solid fa-circle" style="color: rgba(168, 85, 247, 1);"></i>Closed</p>
+            </div>
+            </div>
+
+        </section>
+
+            <!-- Post Section -->
+            <section class="mx-auto shadow-2xl rounded-lg mt-4">
+                <!-- Post Heading -->
+                <div id="issues-container"
+                    class="flex flex-col md:flex-row gap-5 justify-between items-center p-4 border-b-2 border-b-gray-400 rounded-md">
+                </div>
+            </section>
+
+
+        <section id="spinner-container" class="hidden text-center">
+            <span class="loading loading-spinner loading-xl"></span>
+        </section>
+
+
+        <section>
+            <dialog id="issue" class="modal"></dialog>
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
